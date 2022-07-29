@@ -2,3 +2,7 @@
 
     // "watch": "postcss ./style.css --output dist/style.css --watch"
     // "postcss ./style.css --output dist/assets/style.css"
+
+    To comit to gh pages
+    
+    git subtree push --prefix dist origin gh-pages

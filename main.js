@@ -31,18 +31,17 @@ githubLogin.addEventListener('click', () => {
 googleLogin.addEventListener('click', () => {
   loginWithGoogle()
 })
-mailLogin.addEventListener('click', (e) => {
-  e.preventDefault()
-  loginWithEmail()
-})
-
 const loginWithEmail = () => {
   const auth = getAuth()
   createUserWithEmailAndPassword(auth, email, password)
-    .then((user) => {
+    .then((result) => {
+      const user = result.user
       console.log(user)
-      console.log('You are alredy signed!')
     }).catch((error) => {
       console.log(error)
     })
 }
+mailLogin.addEventListener('click', (e) => {
+  e.preventDefault()
+  loginWithEmail()
+})
