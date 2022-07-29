@@ -18,6 +18,19 @@
     "vite": "^3.0.0"
   },
   "dependencies": {
-    "firebase": "^9.9.1"
-  }
+    "firebase": "^9.9.1",
+    "vite-plugin-eslint": "^1.7.0"
+  },
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sergioaorozco/ViteLogin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sergioaorozco/ViteLogin/issues"
+  },
+  "homepage": "https://github.com/Sergioaorozco/ViteLogin#readme",
+  "description": ""
 }
