@@ -1,10 +1,10 @@
-import { loginWithGithub } from './firebase/client'
+import { loginWithGithub, loginWithGoogle, loginWithEmail } from './firebase/client'
 
 const handleCheck = document.getElementById('switchTheme')
 const handleDiv = document.getElementById('switchSection')
 const githubLogin = document.getElementById('githubLogin')
-// const googleLogin = document.getElementById('googleLogin')
-// const mailLogin = document.getElementById('mailLogin')
+const googleLogin = document.getElementById('googleLogin')
+const mailLogin = document.getElementById('mailLogin')
 
 handleDiv.addEventListener('click', function () {
   handleCheck.checked = !handleCheck.checked
@@ -23,4 +23,11 @@ handleDiv.addEventListener('click', function () {
 
 githubLogin.addEventListener('click', () => {
   loginWithGithub()
+})
+
+googleLogin.addEventListener('click', () => {
+  loginWithGoogle()
+})
+mailLogin.addEventListener('click', () => {
+  loginWithEmail()
 })

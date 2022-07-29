@@ -1,4 +1,4 @@
 # Helper Markdown
 
     // "watch": "postcss ./style.css --output dist/style.css --watch"
-    // "build": "postcss ./style.css --output dist/style.css"
+    // "postcss ./style.css --output dist/assets/style.css"
