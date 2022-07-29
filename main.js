@@ -6,8 +6,8 @@ const handleDiv = document.getElementById('switchSection')
 const githubLogin = document.getElementById('githubLogin')
 const googleLogin = document.getElementById('googleLogin')
 const mailLogin = document.getElementById('mailLogin')
-const email = document.getElementById('clientEmail').value
-const password = document.getElementById('clientPass').value
+const email = document.getElementById('clientEmail')
+const password = document.getElementById('clientPass')
 
 handleDiv.addEventListener('click', function () {
   handleCheck.checked = !handleCheck.checked
@@ -33,7 +33,7 @@ googleLogin.addEventListener('click', () => {
 })
 const loginWithEmail = () => {
   const auth = getAuth()
-  createUserWithEmailAndPassword(auth, email, password)
+  createUserWithEmailAndPassword(auth, email.value, password.value)
     .then((result) => {
       const user = result.user
       console.log(user)

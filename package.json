@@ -5,9 +5,7 @@
   "module": "type",
   "scripts": {
     "dev": "vite",
-    "deploy": "vite build",
-    "build": "postcss ./style.css --output dist/assets/style.css",
-    "preview": "postcss ./style.css --output dist/assets/style.css"
+    "deploy": "vite build"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
