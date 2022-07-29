@@ -28,6 +28,7 @@ githubLogin.addEventListener('click', () => {
 googleLogin.addEventListener('click', () => {
   loginWithGoogle()
 })
-mailLogin.addEventListener('click', () => {
+mailLogin.addEventListener('click', (e) => {
+  e.preventDefault()
   loginWithEmail()
 })
