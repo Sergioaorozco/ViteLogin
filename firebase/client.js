@@ -1,11 +1,7 @@
 import firebase from 'firebase/compat/app'
-import { getAuth, signInWithPopup, GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword } from 'firebase/auth'
+import { getAuth, signInWithPopup, GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth'
 const provider = new GithubAuthProvider()
 const providerGoogle = new GoogleAuthProvider()
-const email = document.getElementById('clientEmail').value
-const password = document.getElementById('clientPass').value
-
-console.log(email)
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDVkwDplSu8sXq_rIa-Wl9HVGni5-QK6l0',
@@ -36,18 +32,6 @@ export const loginWithGoogle = () => {
   signInWithPopup(auth, providerGoogle)
     .then((user) => {
       console.log(user)
-    }).catch((error) => {
-      console.log(error)
-    })
-}
-
-export const loginWithEmail = () => {
-  const auth = getAuth()
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user
-      console.log(user)
-      console.log('You are alredy signed!')
     }).catch((error) => {
       console.log(error)
     })
