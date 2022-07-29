@@ -2,6 +2,7 @@
   "name": "vitelogin",
   "private": true,
   "version": "0.0.0",
+  "module": "type",
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",

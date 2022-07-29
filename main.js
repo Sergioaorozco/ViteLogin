@@ -1,6 +1,10 @@
+import { loginWithGithub } from './firebase/client'
 
 const handleCheck = document.getElementById('switchTheme')
 const handleDiv = document.getElementById('switchSection')
+const githubLogin = document.getElementById('githubLogin')
+// const googleLogin = document.getElementById('googleLogin')
+// const mailLogin = document.getElementById('mailLogin')
 
 handleDiv.addEventListener('click', function () {
   handleCheck.checked = !handleCheck.checked
@@ -15,4 +19,8 @@ handleDiv.addEventListener('click', function () {
     bodyElement.classList.remove('isDarkColor')
     bodyElement.classList.add('isLightColor')
   }
+})
+
+githubLogin.addEventListener('click', () => {
+  loginWithGithub()
 })
