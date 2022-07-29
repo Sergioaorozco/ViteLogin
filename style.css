@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --Main-Light-Color: rgb(241 245 249);
+    --Main-Dark-Color: rgb(30 41 59);
+    --toggle-control: 1.3rem;
+}
+
+body.isLightColor {
+    background-color: var(--Main-Light-Color);
+    transition: 0.2s ease-in;
+}
+
+body.isDarkColor {
+    background-color: var(--Main-Dark-Color);
+    transition: 0.2s ease-in;
+
+    .signform {
+        background: #19547982;
+
+        .signInput {
+
+            h2,
+            label {
+                color: white;
+            }
+        }
+    }
+}
+
+
+.switchTheme+label {
+    position: absolute;
+    display:inline-block;
+    height: var(--toggle-control);
+    width: calc(var(--toggle-control)*2);
+    border-radius:calc(var(--toggle-control)*2);
+    background-color: #e2e8f0;
+}
+
+.switchTheme:checked+label {
+    background-color: rgb(51 65 85);
+}
+
+
+.switchTheme +label:after {
+    --circle-size: calc( var(--toggle-control) * 1);
+    content: "";
+    width: var(--circle-size);
+    height: var(--circle-size);
+    left: calc( var(--circle-size) - var(--toggle-control));
+    top: calc(( var(--circle-size) - var(--toggle-control)) /2 * -0.5);
+    position: absolute;
+    border-radius: 100%;
+    background-color: var(--Main-Dark-Color);
+    transition: all 0.1s ease-in;    
+}
+
+
+.switchTheme:checked+label:after {
+    left: calc(100% - (var(--circle-size) - var(--toggle-control) /2 *0.5));
+    background-color: white;
+    transition: all 0.1s ease-in;
+}
+
+
+.switchTheme[type="checkbox"] {
+    display:none
+}
