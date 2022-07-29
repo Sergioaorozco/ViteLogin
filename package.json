@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
+    // "watch": "postcss ./style.css --output dist/style.css --watch"
+    // "build": "postcss ./style.css --output dist/style.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
