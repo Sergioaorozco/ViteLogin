@@ -5,6 +5,8 @@ const providerGoogle = new GoogleAuthProvider()
 const email = document.getElementById('clientEmail').value
 const password = document.getElementById('clientPass').value
 
+console.log(email)
+
 const firebaseConfig = {
   apiKey: 'AIzaSyDVkwDplSu8sXq_rIa-Wl9HVGni5-QK6l0',
   authDomain: 'sekretuadev.firebaseapp.com',
@@ -42,8 +44,10 @@ export const loginWithGoogle = () => {
 export const loginWithEmail = () => {
   const auth = getAuth()
   createUserWithEmailAndPassword(auth, email, password)
-    .then((user) => {
+    .then((userCredential) => {
+      const user = userCredential.user
       console.log(user)
+      console.log('You are alredy signed!')
     }).catch((error) => {
       console.log(error)
     })
